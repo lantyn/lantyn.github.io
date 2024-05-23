@@ -2,6 +2,9 @@
 
 CONFIG_FILE=_config.yml 
 
+jekyll_pid=$(pgrep -f jekyll)
+kill -KILL $jekyll_pid
+
 /bin/bash -c "exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
 
 while true; do
