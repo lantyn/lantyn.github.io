@@ -4,7 +4,7 @@
 
 title: Tian Lan # the website title (if blank, full name will be used instead)
 first_name: Tian
-middle_name: 
+middle_name:
 last_name: Lan
 email: tlan@cuhk.edu.hk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -13,12 +13,12 @@ footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 # Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords:  # add your own keywords or leave empty
+keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🪢 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: localhost:8080 # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://lantyn.github.io # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -86,7 +86,7 @@ linkedin_username: # your LinkedIn user name
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 medium_username: # your Medium username
 arxiv: https://arxiv.org/a/lan_t_2.html
-orcid_id : 0000-0002-0961-969X # your ORCID ID
+orcid_id: 0000-0002-0961-969X # your ORCID ID
 osf_id: # your OSF ID
 pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
@@ -110,7 +110,6 @@ zotero_username: # your zotero username
 
 contact_note: >
 # You can even add a little note about which of these is the best way to reach you.
-
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
@@ -157,7 +156,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname:  # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
