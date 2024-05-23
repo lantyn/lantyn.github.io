@@ -8,11 +8,13 @@ nav_order: 6
 ---
 
 ##### Notes
-* [[An Introduction to Category Theory]](/assets/pdf/IntroCat.pdf) Draft of a chapter in a work-in-progress textbook, focusing on the basic category theory with applications in topological phases with symmetry.    
-*may contain errors, use at your own risk*
+
+- [[An Introduction to Category Theory]](/assets/pdf/IntroCat.pdf) Draft of a chapter in a work-in-progress textbook, focusing on the basic category theory with applications in topological phases with symmetry.  
+  _may contain errors, use at your own risk_
 
 ---
 
 ##### Courses taught at CUHK
-* (2021-23 Fall)   PHYS 5410   **Advanced Quantum Mechanics**   [[Lecture notes]](/assets/pdf/AQM.pdf) 
-* (2024 Spring)   PHYS 1111 **University Physics I, Introduction to Mechanics, Fluids and Waves**
+
+- (2021-23 Fall) PHYS 5410 **Advanced Quantum Mechanics** [[Lecture notes]](/assets/pdf/AQM.pdf)
+- (2024 Spring) PHYS 1111 **University Physics I, Introduction to Mechanics, Fluids and Waves**

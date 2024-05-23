@@ -25,7 +25,7 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.publisher == "arXiv" %}
+      {% if entry.publisher == 'arXiv' %}
         <abbr class="badge rounded w-100">{{ entry.publisher }}</abbr>
       {% endif %}
       {% if entry.preview %}
@@ -238,7 +238,7 @@
       {% if entry.url %}
         <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% else %}
-        {% if entry.doi and entry.publisher != "arXiv" %}
+        {% if entry.doi and entry.publisher != 'arXiv' %}
           <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">Website</a>
         {% endif %}
       {% endif %}
