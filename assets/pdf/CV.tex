@@ -1,0 +1,317 @@
+\documentclass[hidelinks,a4paper]{article}
+%\usepackage[sort&compress,numbers]{natbib}
+% \renewcommand{\refname}{Publications}
+\usepackage[backend=biber,sorting=ydnt,style=phys,eprint=true,biblabel=brackets,giveninits=false,
+]{biblatex}
+\DeclareSortingTemplate{ymdnt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort[direction=descending]{
+    \field{sortyear}
+    \field{year}
+    \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{month}
+    \literal{99}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{day}
+    \literal{99}
+  }
+  \sort{
+    \field{sortname}
+    \field{author}
+    \field{editor}
+    \field{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{sorttitle}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=4,padchar=0]{volume}
+    \literal{9999}
+  }
+}
+\bibliography{paper.bib}
+\usepackage[colorlinks,citecolor=blue,urlcolor = blue]{hyperref}
+\usepackage[margin=1in]{geometry}
+%\renewcommand\labelitemi{--}
+
+% Highlight author name
+\makeatletter
+\def\nhblx@bibfile@name{\jobname -nhblx.bib}
+\newwrite\nhblx@bibfile
+\immediate\openout\nhblx@bibfile=\nhblx@bibfile@name
+
+\immediate\write\nhblx@bibfile{%
+  @comment{Auto-generated file}\blx@nl}
+
+\newcounter{nhblx@name}
+\setcounter{nhblx@name}{0}
+
+\newcommand*{\nhblx@writenametobib}[1]{%
+  \stepcounter{nhblx@name}%
+  \edef\nhblx@tmp@nocite{%
+    \noexpand\AfterPreamble{%
+      \noexpand\setbox0\noexpand\vbox{%
+        \noexpand\nhblx@getmethehash{nhblx@name@\the\value{nhblx@name}}}}%
+  }%
+  \nhblx@tmp@nocite
+  \immediate\write\nhblx@bibfile{%
+    @misc{nhblx@name@\the\value{nhblx@name}, author = {\unexpanded{#1}}, %
+          options = {dataonly=true},}%
+  }%
+}
+
+\AtEndDocument{%
+  \closeout\nhblx@bibfile}
+
+\addbibresource{\nhblx@bibfile@name}
+
+\newcommand*{\nhblx@boldhashes}{}
+\DeclareNameFormat{nhblx@hashextract}{%
+  \xifinlist{\thefield{hash}}{\nhblx@boldhashes}
+    {}
+    {\listxadd{\nhblx@boldhashes}{\thefield{hash}}}}
+
+\DeclareCiteCommand{\nhblx@getmethehash}
+  {}
+  {\printnames[nhblx@hashextract][1-999]{author}}
+  {}
+  {}
+
+\newcommand*{\addboldnames}{\forcsvlist\nhblx@writenametobib}
+\newcommand*{\resetboldnames}{\def\nhblx@boldhashes{}}
+
+\newcommand*{\mkboldifhashinlist}[1]{%
+  \xifinlist{\thefield{hash}}{\nhblx@boldhashes}
+    {\mkbibbold{#1}}
+    {#1}}
+\makeatother
+
+\DeclareNameWrapperFormat{boldifhashinlist}{%
+  \renewcommand*{\mkbibcompletename}{\mkboldifhashinlist}%
+  #1}
+
+\DeclareNameWrapperAlias{sortname}{default}
+\DeclareNameWrapperAlias{default}{boldifhashinlist}
+
+\addboldnames{{Lan, Tian}}
+
+\begin{document}
+\fontsize{12}{15}
+\selectfont
+\nocite{*}
+
+\title{\bf Tian Lan}
+\author{}\date{}
+
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+%Sex&Male\\Date of Birth&30 Jan, 1990\\Place of Birth&Shandong, China\\
+Address
+&Room G6, Science Centre North Block\\
+&Department of Physics\\
+&The Chinese University of Hong Kong\\
+%&31 Caroline St. N.\\
+%&Perimeter Institute for Theoretical Physics,\\
+%&Waterloo, Ontario, N2L 2Y5, Canada\\
+Mobile& (852) 5346 6548\\              
+E-mail&tlan@cuhk.edu.hk\\
+&tlannaax@gmail.com
+\end{tabular}
+\end{center}
+\section*{Education}
+\def\arraystretch{1.}
+\begin{tabular}{cl}
+  { 2013--2017} & PhD in Theoretical Physics\\
+  &Perimeter Institute for Theoretical Physics \& University of Waterloo\\
+  &Thesis: \href
+  {https://uwspace.uwaterloo.ca/handle/10012/12389} {A Classification of (2+1)D Topological Phases with
+  Symmetries}\\
+  &Supervisor: Xiao-Gang Wen\\
+  \\
+  { 2012--2013} &MSc in Theoretical Physics,  Perimeter Scholars International (PSI)\\
+  &Perimeter Institute for Theoretical Physics \& University of Waterloo\\
+  %&Thesis: Classification of Quasiparticles in Levin-Wen String-net Models\\
+  \\
+  { 2008--2012} & BSc in Mathematics and Physics, Tsinghua University\\
+  %&Thesis: Boundaries and Excitations in String-net Models\\
+\end{tabular}
+
+\section*{Experience}
+\def\arraystretch{1.}
+\begin{tabular}{cl}
+  { 2018--2020} & Postdoctoral Fellow\\ 
+  &Institute for Quantum Computing, University of Waterloo\\
+  &Supervisors: Raymond Laflamme, Bei Zeng\\
+  {2021.6--now} &Assistant Professor\\
+  &The Chinese University of Hong Kong
+\end{tabular}
+
+\section*{Research Interests}
+My research focuses on the theory of topological phases of matter:
+\begin{itemize}
+  \item  intrinsic topological order,
+  \item  symmetry protected topological (SPT) phases, which include topological
+    insulators as a special case,
+  \item  symmetry enriched topological (SET) phases,
+  \item  higher dimensional generalization of symmetry and topological phases,
+  \item \ldots
+\end{itemize}
+and their mathematical foundation:
+\begin{itemize}
+  \item tensor category,
+  \item higher category, higher algebra,
+  \item group cohomology, algebraic topology,
+  \item \ldots
+\end{itemize}
+I am also interested in understanding the nature of phases of matter from a
+quantum information perspective, and possible applications of topological
+materials such as quantum computing.
+
+\section*{Grants}
+Direct Grant No. 4053501, The Chinese University of Hong Kong\\
+Early Career Scheme (ECS) No. 24304722, Hong Kong Research Grants Council
+
+\section*{Teaching}
+\begin{tabular}{cl}
+  2021-23 Fall & PHYS5410(M) Advanced Quantum Mechanics\\
+% &\begin{minipage}{.8\textwidth}
+%   \begin{tabular}{ccc}
+%     Adjusted CTE score &  PHYS5410 & PHYS5410M \\
+%     2021 & 5.06 &\\
+%      2022 & 5.36 & 5.80\\
+%      2023 & 4.88 &\\
+% \end{tabular}
+% \end{minipage}\\
+  2024 Spring& PHYS1111B University Physics I, Introduction to Mechanics, Fluids and Waves
+\end{tabular}
+
+
+
+%\section*{Languages} English and Chinese
+\section*{Referee}
+Physical Review X, Physical Review X Quantum, Physical Review Letters, Physical
+Review Research, Physical Review B, Journal of High Energy Physics, Scipost, Quantum.
+\section*{Editor}
+Advances in Theoretical and Mathematical Physics.
+
+
+
+\section*{Awards and Honors}
+Early Career Award 2021/22, University Grants Committee\\
+2017 Chinese Government Award for Outstanding Self-financed Students
+Abroad\\
+%Perimeter Institute PhD Award\\
+%Marie Curie Award\\
+%Perimeter Scholars International Award\\
+%PSI Tuition Award\\
+Scholarship of Tsinghua Xuetang\\
+Scholarship of Tsinghua-Zhenggeru\\
+Scholarship of Shanghai Institute of Microsystem\\
+%2nd Prize, 26th National Undergraduate Physics Competition\\
+%1st Prize, Tsinghua Freshman Physics Competition\\
+%Practice Award in the course of electronic technology practice\\
+%2nd Prize of Polyphony Harmonica, 3rd Tsinghua Harmonica Competition\\
+%1st Prize of Chromatic Harmonica, 4th Tsinghua Harmonica Competition\\
+
+% \bibliographystyle{utphys}
+\section*{Talks}
+\begin{itemize}
+\item A ``Periodic Table'' of Topological Orders
+
+  \begin{itemize}\small
+    \item SIAM Annual Meeting (AN16), Boston, Massachusetts, USA, July, 2016 
+    \\  {\tiny invited but was not able to attend due to visa delay}
+    \item Department of Physics, Fudan University, May, 2018
+    \item Department of Physics, Tsinghua University, July, 2018
+    \item Graduate School of China Academy of Engineering Physics, July, 2018
+    \item Department of Physics, Southern University of Science and Technology, July, 2019
+    \item The Chinese University of Hong Kong, October, 2020
+  \end{itemize}
+  \item Non-Abelian Family of Topological Order~\supercite{LW1701.07820}
+
+    \begin{itemize}\small
+      \item Croucher Summer Course “Quantum Entanglement and Topological Order”,
+	The Chinese University of Hong Kong, June, 2017
+      \item 
+	Department of Physics, Southern University of Science and Technology, July, 2019
+  \end{itemize}
+\item Matrix Formulation of Non-Abelian Family~\supercite{Lan1908.02599}
+  \begin{itemize}\small
+    \item Topological Quantum Computing (TQC2019), Shenzhen, China, December, 2019
+  \end{itemize}
+\item Higher Dimensional Topological Order, Higher Category and A Classification
+  in 3+1D~\supercite{LKW1704.04221,LW1801.08530}
+
+  \begin{itemize}\small
+    \item Department of Physics, Tsinghua University, May, 2018
+    \item Séminaire de mathématiques supérieures (SMS) 2018, Fields Institute for Research in Mathematical Sciences, June, 2018
+    \item Quantum Information and Operator Algebras III, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, July, 2018
+    \item Department of Physics, Sun Yat-Sen University, July, 2019
+    \item QuIST V: The 5th International Conference on Quantum Information,
+      Space-time, and Topological order, Kunming, China, August, 2019
+      \item 	Department of Physics, Southern University of Science and Technology, August, 2019
+    \item The Chinese University of Hong Kong, October, 2020
+    \item CMSA, Harvard University, June, 2021
+    \item BIMSA, March, 2022
+  \end{itemize}
+  \item The Modular Extension Characterization of SPT/SET Phases~\supercite{LKW1507.04673,LKW1602.05936,LKW1602.05946}
+  \begin{itemize}
+    \item BIMSA, December, 2021
+  \end{itemize}
+  \item Introduction to Categorical Approach to Topological Phases in Arbitrary Dimensions
+  \begin{itemize}\small
+     \item Center of Mathematical Sciencies and Applications, Harvard University, April 15, 2020
+  \end{itemize}
+  \item Higher symmetry entriched topological phases~\supercite{KLW+2003.08898,KLW+2005.14178}
+  \begin{itemize}\small
+     \item  Topological Orders and Higher Structures, Erwin Schrödinger Institute for Mathematics and Physics, University of Vienna, August, 2020
+  \end{itemize}
+  \item Quantum Current~\supercite{LZ2305.12917}
+  \begin{itemize}\small
+     \item  Croucher Summer Course "Quantum Entanglement and Topological Order", CUHK, June, 2023
+     \item  The first International Congress of Basic Science (ICBS), BIMSA, July, 2023
+     \item  Entangled Quantum Matter Workshop, Tsinghua University, August, 2023
+  \end{itemize}
+  \item Gauging of generalized symmetry~\supercite{LYW2312.15958}
+  \begin{itemize}\small
+    \item  Mini-Workshop on Unconventional Superconductivity and Correlated Electron Systems, CUHK, Dec, 2023
+  \end{itemize}
+  
+\end{itemize}
+
+\printbibliography[title=Publications]
+
+
+% \section*{References}
+% \begin{itemize}
+%   \item Xiao-Gang Wen \textless xgwen@mit.edu\textgreater
+%   \item Liang Kong \textless kongl@sustech.edu.cn\textgreater
+%   \item Bei Zeng \textless zengb@ust.hk\textgreater
+% \end{itemize}
+% Alternative:
+% \begin{itemize}
+%   \item Zheng-Cheng Gu \textless zcgu@phy.cuhk.edu.hk\textgreater
+%   \item Davide Gaiotto \textless dgaiotto@gmail.com\textgreater
+    
+% \end{itemize}
+
+%\section{Extracurricular Activities}
+%\begin{itemize}
+%\item[Harmonica] In Tsinghua Harmonica Association\\
+%Play polyphony/chromatic harmonica in a harmonica band
+%\item[Chinese Martial Arts] Taichi Quan, Broadsword Play
+%\item[Teaching Experience] Taught high school students mathematics and physics in summer schools, popular with the students
+%\end{itemize}
+
+\end{document}
