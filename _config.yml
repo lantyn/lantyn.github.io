@@ -299,7 +299,7 @@ scholar:
   style: american-physics-society
   locale: en
 
-  source: /assets/pdf/
+  source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
