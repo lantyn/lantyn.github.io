@@ -2,11 +2,17 @@
 layout: page
 permalink: /teaching/
 title: Teaching & Notes
-description: Materials for courses you taught. Replace this text with your description.
+description: # Materials for courses you taught. Replace this text with your description.
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+##### Notes
+* [[An Introduction to Category Theory]](/assets/pdf/IntroCat.pdf) Draft of a chapter in a work-in-progress textbook, focusing on the basic category theory with applications in topological phases with symmetry.    
+*may contain errors, use at your own risk*
 
-Organize your courses by years, topics, or universities, however you like!
+---
+
+##### Courses taught at CUHK
+* (2021-23 Fall)   PHYS 5410   **Advanced Quantum Mechanics**   [[Lecture notes]](/assets/pdf/AQM.pdf) 
+* (2024 Spring)   PHYS 1111 **University Physics I, Introduction to Mechanics, Fluids and Waves**

@@ -40,7 +40,7 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -85,6 +85,7 @@ lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 linkedin_username: # your LinkedIn user name
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 medium_username: # your Medium username
+arxiv: https://arxiv.org/a/lan_t_2.html
 orcid_id : 0000-0002-0961-969X # your ORCID ID
 osf_id: # your OSF ID
 pinterest_id: # your pinterest id
@@ -134,10 +135,10 @@ lsi: true # produce an index for related posts
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
-  enabled: true
+  enabled: false
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
@@ -222,6 +223,7 @@ exclude:
   - _pages/about_einstein.md
   - purgecss.config.js
   - vendor
+  - assets/pdf/CV.tex
 keep_files:
   - CNAME
   - .nojekyll
