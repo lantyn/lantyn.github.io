@@ -10,8 +10,9 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>G6, Science Centre, CUHK</p>
-    <p>Email: <a href="mailto:tlan@cuhk.edu.hk" target="_blank">tlan@cuhk.edu.hk</a></p>
-
+    <p> <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:tlan@cuhk.edu.hk" target="_blank">tlan@cuhk.edu.hk</a></p>
+    <p> <i class="fa fa-university" aria-hidden="true"></i> <a href="https://newww.phy.cuhk.edu.hk/teaching_staff/tian-lan" target="_blank">CUHK Webpage</a></p>
+    <p> <i class='fa-brands fa-github' aria-hidden="true"></i> <a href="https://github.com/lantyn" target="_blank"> GitHub</a> </p>
 news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
