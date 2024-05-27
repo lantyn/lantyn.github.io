@@ -3,7 +3,7 @@
 CONFIG_FILE=_config.yml 
 
 jekyll_pid=$(pgrep -f jekyll)
-if [ ! -z "$jekyll_pid"]; then
+if [ ! -z "$jekyll_pid" ]; then
 kill -KILL $jekyll_pid
 fi
 
