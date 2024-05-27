@@ -299,7 +299,7 @@ scholar:
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
+  bibtex_filters: [smallcaps, superscript]
 
   replace_strings: true
   join_strings: true
@@ -308,7 +308,10 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
+  
+  sort_by: year
+  order: descending
+  group_by: none
   group_order: descending
 
 # Display different badges withs stats for your publications
