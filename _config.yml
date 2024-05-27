@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Tian Lan # the website title (if blank, full name will be used instead)
+title: Tian LAN # the website title (if blank, full name will be used instead)
 first_name: Tian
 middle_name:
-last_name: Lan
+last_name: LAN
 email: tlan@cuhk.edu.hk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Symmetry meets Topological Order in Higher Category
