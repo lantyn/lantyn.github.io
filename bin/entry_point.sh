@@ -3,7 +3,9 @@
 CONFIG_FILE=_config.yml 
 
 jekyll_pid=$(pgrep -f jekyll)
+if [ ! -z "$jekyll_pid"]; then
 kill -KILL $jekyll_pid
+fi
 
 /bin/bash -c "exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
 
