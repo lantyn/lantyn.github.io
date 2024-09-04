@@ -4,7 +4,7 @@ permalink: /talks/
 title: Talks
 description: # Materials for courses you taught. Replace this text with your description.
 nav: true
-nav_order: 6
+nav_order: 3
 ---
 
 - 2023-07-26 [ICBS] Quantum Current [[koushare]](https://www.koushare.com/live/details/19970?vid=77727)
