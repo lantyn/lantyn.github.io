@@ -34,6 +34,12 @@ profiles:
     more_info:
 
   - align: right
+    image:
+    content: Mayizhou.md
+    image_circular: false # crops the image to make it circular
+    more_info:
+
+  - align: right
     image: Chanying.jpg
     content: Chanying.md
     image_circular: false # crops the image to make it circular
