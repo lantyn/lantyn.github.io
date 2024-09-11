@@ -1,6 +1,6 @@
 <span style="font-size:1.5em;"> **Kar Kee (Kelly) CHAN** </span>
 
-*Undergraduate* 
+_Undergraduate_
 
 My name is Kelly and I am an undergraduate student in Professor Lan’s group. The idea of focusing on morphisms - the relations between objects, rather than the internal structure has greatly impressed me. While some may find it too abstract, I think it is quite interesting.
 
