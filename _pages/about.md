@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p> <i class="fa fa-map-signs" aria-hidden="true"></i>  G6 Science Centre</p>
     <p> <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:tlan@cuhk.edu.hk" target="_blank">tlan@cuhk.edu.hk</a></p>
-    <p> <i class="fa fa-university" aria-hidden="true"></i> <a href="https://newww.phy.cuhk.edu.hk/teaching_staff/tian-lan" target="_blank">CUHK Webpage</a></p>
+    <p> <i class="fa fa-university" aria-hidden="true"></i> <a href="https://wp.phy.cuhk.edu.hk/teaching_staff/tian-lan" target="_blank">CUHK Webpage</a></p>
     <br><p> <i class='ai ai-orcid' aria-hidden="true"></i> <a href="https://orcid.org/0000-0002-0961-969X" target="_blank"> ORCID</a> </p>
     <p> <i class='fa-brands fa-github' aria-hidden="true"></i> <a href="https://github.com/lantyn" target="_blank"> GitHub</a> </p>
 news: false # includes a list of news items
