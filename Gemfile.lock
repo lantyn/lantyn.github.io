@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/RobertoJBeltran/jekyll-terser.git
+  revision: 1085bf66d692799af09fe39f8162a1e6e42a3cc4
+  specs:
+    jekyll-terser (0.2.3)
+      jekyll (>= 0.10.0)
+      terser (>= 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,7 +58,7 @@ GEM
       time (< 1.0)
     csl-styles (2.0.2)
       csl (~> 2.0)
-    css_parser (2.2.0)
+    css_parser (1.22.0)
       addressable
     cssminify2 (2.1.0)
     csv (3.3.5)
@@ -110,6 +118,10 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
+    jekyll-3rd-party-libraries (0.0.1)
+      css_parser (>= 1.6, < 2.0)
+      jekyll (>= 3.6, < 5.0)
+      nokogiri (>= 1.8, < 2.0)
     jekyll (4.4.1)
       addressable (~> 2.4)
       base64 (~> 0.2)
@@ -131,6 +143,8 @@ GEM
       webrick (~> 1.7)
     jekyll-archives (2.3.0)
       jekyll (>= 3.6, < 5.0)
+    jekyll-cache-bust (0.0.1)
+      jekyll (>= 3.6, < 5.0)
     jekyll-email-protect (1.1.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
@@ -150,6 +164,7 @@ GEM
       terser (~> 1.2.3)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
+    jekyll-regex-replace (1.1.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-scholar (7.3.0)
@@ -159,6 +174,8 @@ GEM
       jekyll (~> 4.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-socials (0.0.7)
+      jekyll (>= 3.6, < 5.0)
     jekyll-tabs (1.2.1)
       jekyll (>= 3.0, < 5.0)
     jekyll-toc (0.19.0)
@@ -178,15 +195,7 @@ GEM
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    language_server-protocol (3.17.0.5)
     latex-decode (0.4.2)
-    libv8-node (24.12.0.1)
-    libv8-node (24.12.0.1-aarch64-linux)
-    libv8-node (24.12.0.1-aarch64-linux-musl)
-    libv8-node (24.12.0.1-arm64-darwin)
-    libv8-node (24.12.0.1-x86_64-darwin)
-    libv8-node (24.12.0.1-x86_64-linux)
-    libv8-node (24.12.0.1-x86_64-linux-musl)
     liquid (4.0.4)
     listen (3.10.0)
       logger
@@ -199,8 +208,6 @@ GEM
     matrix (0.4.3)
     mercenary (0.4.0)
     mini_mime (1.1.5)
-    mini_racer (0.21.0)
-      libv8-node (~> 24.12.0.1)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
@@ -229,6 +236,7 @@ GEM
       stringio
       time
       uri
+    ostruct (0.6.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     prism (1.9.0)
@@ -238,16 +246,8 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rbs (4.0.2)
-      logger
-      prism (>= 1.6.0)
-      tsort
     rexml (3.4.4)
     rouge (4.7.0)
-    ruby-lsp (0.26.9)
-      language_server-protocol (~> 3.17.0)
-      prism (>= 1.2, < 2.0)
-      rbs (>= 3, < 5)
     safe_yaml (1.0.5)
     sass-embedded (1.99.0-aarch64-linux-gnu)
       google-protobuf (~> 4.31)
@@ -276,11 +276,9 @@ GEM
       execjs (>= 0.3.0, < 3)
     time (0.4.2)
       date
-    tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
-    unicode_utils (1.4.0)
     uri (1.1.1)
     webrick (1.9.2)
 
@@ -294,6 +292,7 @@ PLATFORMS
   arm-linux-musleabihf
   arm64-darwin
   x86_64-darwin
+  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -303,7 +302,9 @@ DEPENDENCIES
   feedjira
   httparty
   jekyll
+  jekyll-3rd-party-libraries
   jekyll-archives
+  jekyll-cache-bust
   jekyll-email-protect
   jekyll-feed
   jekyll-get-json
@@ -312,16 +313,17 @@ DEPENDENCIES
   jekyll-link-attributes
   jekyll-minifier
   jekyll-paginate-v2
+  jekyll-regex-replace
   jekyll-scholar
   jekyll-sitemap
+  jekyll-socials
   jekyll-tabs
+  jekyll-terser!
   jekyll-toc
   jekyll-twitter-plugin
   jemoji
-  mini_racer
-  ruby-lsp
-  unicode_utils
-  webrick
+  observer
+  ostruct
 
 BUNDLED WITH
-   2.5.10
+  4.0.4
