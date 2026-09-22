@@ -40,19 +40,19 @@ profiles:
     more_info:
 
   - align: right
-    image: Chanying.jpg
+    image: #Chanying.jpg
     content: Chanying.md
     image_circular: false # crops the image to make it circular
     more_info:
 
   - align: right
-    image: Kelly.jpg
+    image: #Kelly.jpg
     content: Kelly.md
     image_circular: false # crops the image to make it circular
     more_info:
 
   - align: right
-    image: Wulinqian.jpg
+    image: #Wulinqian.jpg
     content: Wulinqian.md
     image_circular: false # crops the image to make it circular
     more_info:
